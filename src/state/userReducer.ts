@@ -1,7 +1,7 @@
 import {createSlice, Dispatch, PayloadAction} from "@reduxjs/toolkit"
 import {usersAPI} from "../api/usersAPI"
 import {userType} from "../App"
-import {log} from "util";
+
 
 const initialState: userType[] = []
 type data = {

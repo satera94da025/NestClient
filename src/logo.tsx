@@ -3,6 +3,9 @@ import React, {useCallback} from 'react';
 import AboutUserModal from './utils/aboutUserModal';
 
 type propsTypes = {
+    age: number
+    email: string
+    job: string
     name: string
     secondName: string
     deleteUser: (id: string) => void
@@ -35,7 +38,8 @@ const Logo = (props: propsTypes) => {
                         <Avatar size="xl" name="Christian Nwamba" src="https://bit.ly/code-beast"/>{" "}
                     </WrapItem>
                 </Wrap>
-                <Text fontSize="6xl" color="#8f659a" as="samp" isTruncated>{props.name} {props.secondName}</Text>
+                <Text fontSize="6xl" color="#8f659a" as="samp"
+                      isTruncated>{props.name} {props.secondName} {props.age} {props.email} {props.job}</Text>
                 <Button onClick={deleteUser} colorScheme="red" variant="solid">Delete user</Button>
                 <AboutUserModal/>
             </Box>
